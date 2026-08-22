@@ -15,7 +15,8 @@ event.preventDefault();
 setError("");
 
 try {
-  const response = await fetch("http://localhost:3000/auth/login", {
+  const response = await fetch("https://silog-backend.wittystone-b25df558.westus2.azurecontainerapps.io/auth/login",
+  {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
