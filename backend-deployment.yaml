@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: default-route-openshift-image-registry.apps.rm2.thpm.p1.openshiftapps.com/tercioo-gabriel-dev/backend:latest
+          ports:
+            - containerPort: 3000

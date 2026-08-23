@@ -15,7 +15,7 @@ event.preventDefault();
 setError("");
 
 try {
-  const response = await fetch("https://silog-backend.wittystone-b25df558.westus2.azurecontainerapps.io/auth/login",
+  const response = await fetch("http://backend-route-tercioo-gabriel-dev.apps.rm2.thpm.p1.openshiftapps.com/auth/login",
   {
     method: "POST",
     headers: {

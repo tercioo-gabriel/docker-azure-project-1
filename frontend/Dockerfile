@@ -1,12 +1,13 @@
-FROM node:22-alpine
+FROM node:20
 
 WORKDIR /app
 
 COPY package*.json ./
-
 RUN npm install
 
 COPY . .
+
+RUN chmod -R g=u /app
 
 EXPOSE 5173
 
